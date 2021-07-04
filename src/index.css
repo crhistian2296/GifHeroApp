@@ -25,7 +25,7 @@ input:focus {
     display: flex;
     flex-flow: row wrap;
     flex-grow: 1;
-    max-width: 25%;
+    max-width: 28%;
     align-items: center;
     border: 1px solid rgb(58, 129, 129);
     border-radius: 5px;
@@ -42,5 +42,11 @@ input:focus {
 .gif-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 500px) {
+    .card {
+        min-width: 90%;
+    }
 }
