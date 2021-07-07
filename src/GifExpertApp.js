@@ -18,8 +18,6 @@ const GifExpertApp = () => {
 
       <AddHero setHeroes={setHeroes} />
 
-      <hr></hr>
-
       {heroesList}
     </main>
   );

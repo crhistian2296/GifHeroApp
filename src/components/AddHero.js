@@ -20,8 +20,6 @@ export default function AddHero({ setHeroes }) {
         "input void, please enter a hero name before submit your request"
       );
     }
-
-    // console.log("submit:", inputValue);
   };
 
   return (

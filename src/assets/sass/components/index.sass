@@ -8,24 +8,18 @@
 
 body, #root
   font-size: 16px
+  overflow-x: hidden
 
 body
   background-color: $secondary-color
 
-.card
-  display: flex
-  flex-flow: column
-
-  img
-    width: 100%
-
-.card-img_title
-  font-size: 1rem
-
 .gif-container
-  display: flex
-  flex-flow: row wrap
-  justify-content: space-evenly
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  grid-template-rows: masonry
+  grid-gap: .8rem
+  justify-content: center
+  align-items: center
 
 @media (max-width: 500px)
   .card
