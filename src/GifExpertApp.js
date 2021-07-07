@@ -13,7 +13,7 @@ const GifExpertApp = () => {
   return (
     <main className="main">
       <h1 className="animate__animated animate__bounce main__title">
-        GifExpert App
+        GifExpert<span className="main-title--colored">App</span>
       </h1>
 
       <AddHero setHeroes={setHeroes} />
