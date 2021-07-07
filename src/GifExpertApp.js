@@ -1,30 +1,28 @@
 import React, { useState } from "react";
 import AddHero from "./components/AddHero";
 import GifGrid from "./components/GifGrid";
+import "./assets/sass/components/giftExpertApp.sass";
 
 const GifExpertApp = () => {
-    // const heroes = ["saitama", "goku", "tanjiro"];
-    const [heroes, setHeroes] = useState(["Saitama"]);
+  const [heroes, setHeroes] = useState(["Saitama"]);
 
-    // const handleAdd = () => {
-    //     setHeroes((initialState) => [...initialState, "luffy"]);
-    //     // console.log(typeof heroes);
-    // };
+  const heroesList = heroes.map((heroe) => (
+    <GifGrid key={heroe} hero={heroe} />
+  ));
 
-    return (
-        <>
-            <h2 className="animate__animated animate__bounce">GifExpertApp</h2>
-            <AddHero setHeroes={setHeroes} />
-            <hr></hr>
-            {/* <button type="submit" onClick={handleAdd}>
-                add
-            </button> */}
+  return (
+    <main className="main">
+      <h1 className="animate__animated animate__bounce main__title">
+        GifExpert App
+      </h1>
 
-            {heroes.map((heroe) => (
-                <GifGrid key={heroe} hero={heroe}></GifGrid>
-            ))}
-        </>
-    );
+      <AddHero setHeroes={setHeroes} />
+
+      <hr></hr>
+
+      {heroesList}
+    </main>
+  );
 };
 
 export default GifExpertApp;
