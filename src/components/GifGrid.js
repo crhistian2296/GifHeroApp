@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
+import "../assets/sass/components/gifGrid.sass";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import GifGridItem from "./GifGridItem";
-import "../assets/sass/components/gifGrid.sass";
 
 function GifGrid({ hero }) {
   // const [images, setImages] = useState([]);
@@ -24,11 +24,11 @@ function GifGrid({ hero }) {
   ));
 
   return (
-    <>
+    <div className='search-result'>
       <h2 className="animate__animated animate__fadeIn search-term">{hero}</h2>
 
       <div className="gif-container">{items}</div>
-    </>
+    </div>
   );
 }
 
